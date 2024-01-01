@@ -1,6 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
+import logo from '../assets/logo.png';
 
 const Header = () => {
   // const { cartItems } = useSelector((state) => state.cart);
@@ -26,9 +27,12 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='md' collapseOnSelect>
+      <Navbar bg='pink' variant='dark' expand='md' collapseOnSelect>
         <Container>
-          <Navbar.Brand>ProShop</Navbar.Brand>
+          <Navbar.Brand>
+            <img src={logo} alt='shop' />
+            SkuraShop
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
