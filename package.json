@@ -1,0 +1,15 @@
+{
+  "name": "sakura-shop",
+  "version": "1.0.0",
+  "description": "A pink ecommarce app ",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Shira Shahar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

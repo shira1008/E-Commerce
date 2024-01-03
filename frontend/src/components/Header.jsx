@@ -29,21 +29,26 @@ const Header = () => {
     <header>
       <Navbar bg='pink' variant='dark' expand='md' collapseOnSelect>
         <Container>
-          <Navbar.Brand>
-            <img src={logo} alt='shop' />
-            SkuraShop
-          </Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <img src={logo} alt='shop' />
+              SkuraShop
+            </Navbar.Brand>
+          </LinkContainer>
 
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link href='/cart'>
-                <FaShoppingCart /> cart
-              </Nav.Link>
-
-              <Nav.Link href='/login'>
-                <FaUser /> Sign In
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link>
+                  <FaShoppingCart /> cart
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/login'>
+                <Nav.Link>
+                  <FaUser /> Sign In
+                </Nav.Link>
+              </LinkContainer>
 
               {/* {userInfo ? (
                 <>
