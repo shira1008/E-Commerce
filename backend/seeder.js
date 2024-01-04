@@ -16,6 +16,7 @@ connectDB();
 //this script - is  designed to import or destroy data in the database
 
 const importData = async () => {
+  //insert or import initial sample data into the database
   try {
     await Order.deleteMany();
     await Product.deleteMany();
@@ -40,6 +41,7 @@ const importData = async () => {
 };
 
 const destroyData = async () => {
+  // delete all data from the database
   try {
     await Order.deleteMany();
     await Product.deleteMany();
