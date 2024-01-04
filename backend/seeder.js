@@ -13,6 +13,8 @@ dotenv.config();
 
 connectDB();
 
+//this script - is  designed to import or destroy data in the database
+
 const importData = async () => {
   try {
     await Order.deleteMany();
