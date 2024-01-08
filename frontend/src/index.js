@@ -7,20 +7,23 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />}>
-          <Route index={true} path='/' element={<HomeScreen />} />
-
-          <Route path='/product/:id' element={<ProductScreen />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App />}>
+            <Route index={true} path='/' element={<HomeScreen />} />
+            <Route path='/product/:id' element={<ProductScreen />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   rootElement
 );
