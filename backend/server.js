@@ -13,6 +13,11 @@ connectDB();
 
 const app = express();
 
+// Body parser middleware
+// Allow to get the body data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
   res.send('API is running wooho:) ');
 });
