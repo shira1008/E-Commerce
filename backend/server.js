@@ -1,6 +1,6 @@
 import express from 'express';
-
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 import connectDB from './config/db.js';
 import productRouts from './routes/productsRouts.js';
@@ -17,6 +17,9 @@ const app = express();
 // Allow to get the body data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Cookie
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.send('API is running wooho:) ');
