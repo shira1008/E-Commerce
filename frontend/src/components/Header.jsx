@@ -1,31 +1,33 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useLogoutMutation } from '../slices/userApiSlice';
+import { logout } from '../slices/authSlice';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
+  const { userInfo } = useSelector((state) => state.auth);
 
-  // const { userInfo } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const [logoutApiCall] = useLogoutMutation();
 
-  // const [logoutApiCall] = useLogoutMutation();
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      // NOTE: here we need to reset cart state for when a user logs out so the next
+      // user doesn't inherit the previous users cart and shipping
 
-  // const logoutHandler = async () => {
-  //   try {
-  //     await logoutApiCall().unwrap();
-  //     dispatch(logout());
-  //     // NOTE: here we need to reset cart state for when a user logs out so the next
-  //     // user doesn't inherit the previous users cart and shipping
-  //     dispatch(resetCart());
-  //     navigate('/login');
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
+      navigate('/login');
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <header>
@@ -57,7 +59,7 @@ const Header = () => {
                 </Nav.Link>
               </LinkContainer>
 
-              {/* {userInfo ? (
+              {userInfo ? (
                 <>
                   <NavDropdown title={userInfo.name} id='username'>
                     <LinkContainer to='/profile'>
@@ -74,7 +76,7 @@ const Header = () => {
                     <FaUser /> Sign In
                   </Nav.Link>
                 </LinkContainer>
-              )} */}
+              )}
 
               {/* Admin Links */}
               {/* {userInfo && userInfo.isAdmin && (
