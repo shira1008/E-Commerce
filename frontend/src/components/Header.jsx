@@ -53,11 +53,11 @@ const Header = () => {
                   )}
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/login'>
+              {/* <LinkContainer to='/login'>
                 <Nav.Link>
-                  <FaUser /> Sign In
+                  <FaUser /> 
                 </Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
 
               {userInfo ? (
                 <>
