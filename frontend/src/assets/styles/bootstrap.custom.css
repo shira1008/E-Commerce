@@ -2109,6 +2109,9 @@ progress {
 }
 .form-label {
   margin-bottom: 0.5rem;
+  color: pink;
+  font-family: var(--bs-font-sans-serif);
+  max-width: 1000px;
 }
 
 .col-form-label {
