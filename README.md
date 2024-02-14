@@ -33,9 +33,11 @@ It allows users to browse through products, add them to the cart, and register/l
 - View the product
 ![Screenshot 2024-02-14 135248](https://github.com/shira1008/E-Commerce/assets/109962964/a02b094d-b9fd-4507-aa92-1571b5c3592f)
 
-- Add to cart, paymant is still in developmant:
+- Add to cart (checkout is still in developmant)
 ![Screenshot 2024-02-14 135254](https://github.com/shira1008/E-Commerce/assets/109962964/92ae515e-2ffc-4dfd-83b1-1de0d956e048)
 
-- logout option , and profile option still in development:
+- logout option (profile option still in development):
+
+
   ![Screenshot 2024-02-14 140501](https://github.com/shira1008/E-Commerce/assets/109962964/24111f5d-3407-46de-83ac-ff1d60b27af7)
 
