@@ -9,7 +9,7 @@ It allows users to browse through products, add them to cart, and register/login
 - Add products to cart, caculate the total price, pay
 - User registration and login (authentication)
 
-#Technologies Used
+# Technologies Used
 - React
 - Redux Toolkit
 - Node.js
@@ -20,9 +20,7 @@ It allows users to browse through products, add them to cart, and register/login
 
 ## Screenshots
 
-
 ![Screenshot 2024-02-14 134156](https://github.com/shira1008/E-Commerce/assets/109962964/32aff3cf-d5b1-47d7-87ce-06bae39ecaa2)
-![Screenshot 2024-02-14 135204](https://github.com/shira1008/E-Commerce/assets/109962964/81ac65e8-b719-4ae5-9bb0-c72fda4030ec)
 
 
 - Sign In:
